@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e94f9b">
+  <title>Sitraka's HR Birthday | 26 Years of Excellence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="dateGuard" class="date-guard" hidden>
+    <div class="guard-card">
+      <span class="guard-icon">📅</span>
+      <h1>Accès programmé</h1>
+      <p>Le système HR Birthday sera disponible le <strong>19 septembre</strong>.</p>
+    </div>
+  </div>
+
+  <main id="birthdayApp" hidden>
+    <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+    <div id="fireworksLayer" class="fireworks-layer" aria-hidden="true"></div>
+
+    <header class="topbar container">
+      <div class="brand">
+        <span class="brand-mark">♡</span>
+        <div>
+          <strong>HR Birthday System</strong>
+          <small>Internal Celebration Portal</small>
+        </div>
+      </div>
+      <button id="musicToggle" class="icon-button" type="button" aria-label="Activer ou mettre en pause la musique">
+        <i class="bi bi-music-note-beamed"></i>
+        <span>Musique</span>
+      </button>
+    </header>
+
+    <section id="introSection" class="hero container">
+      <div class="hero-copy">
+        <span class="eyebrow">19 SEPTEMBRE • DOSSIER PRIORITAIRE</span>
+        <h1>Une demande RH très spéciale… <span>🎂</span></h1>
+        <p>Le système a détecté un événement exceptionnel concernant une HR Admin officiellement âgée de 26 ans.</p>
+        <div class="hero-actions">
+          <button id="startCelebration" class="primary-button" type="button">
+            Ouvrir le dossier <i class="bi bi-arrow-right"></i>
+          </button>
+          <span class="tiny-note"><i class="bi bi-shield-check"></i> Aucun dossier confidentiel utilisé</span>
+        </div>
+      </div>
+
+      <div class="system-card glass-card">
+        <div class="window-bar">
+          <span></span><span></span><span></span>
+          <small>HR_ADMIN_SYSTEM.exe</small>
+        </div>
+        <div id="systemLog" class="system-log" aria-live="polite">
+          <p>&gt; Initializing HR Birthday System...</p>
+        </div>
+        <div class="employee-record">
+          <div><span>Employee</span><strong>Sitraka Mamy Tantely</strong></div>
+          <div><span>Department</span><strong>Human Resources</strong></div>
+          <div><span>Position</span><strong>HR Admin</strong></div>
+          <div><span>Birthday</span><strong>19 September</strong></div>
+          <div><span>Age</span><strong>26</strong></div>
+          <div><span>Status</span><strong class="approved">APPROVED ✓</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="celebrationSection" class="container content-section">
+      <div class="section-heading">
+        <span class="eyebrow">BENEFITS CENTER</span>
+        <h2>Des avantages très importants 💗</h2>
+        <p>Chaque cadeau contient une autorisation spéciale du département RH de la bonne humeur.</p>
+      </div>
+
+      <div class="gift-grid">
+        <button class="gift-card" type="button" data-gift="health">
+          <span class="gift-ribbon">🎁</span>
+          <span class="gift-emoji">💚</span>
+          <strong>Santé</strong>
+          <small>Bonus benefit unlocked</small>
+        </button>
+        <button class="gift-card" type="button" data-gift="peace">
+          <span class="gift-ribbon">🎁</span>
+          <span class="gift-emoji">🕊️</span>
+          <strong>Paix</strong>
+          <small>Peace allowance approved</small>
+        </button>
+        <button class="gift-card" type="button" data-gift="blessings">
+          <span class="gift-ribbon">🎁</span>
+          <span class="gift-emoji">🙏</span>
+          <strong>Bénédictions</strong>
+          <small>Blessings package</small>
+        </button>
+        <button class="gift-card" type="button" data-gift="hr">
+          <span class="gift-ribbon">🎁</span>
+          <span class="gift-emoji">🧑‍💼</span>
+          <strong>HR Admin Kit</strong>
+          <small>Survival kit approved</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="calendar-section container glass-card">
+      <div>
+        <span class="eyebrow">CALENDAR NOTIFICATION</span>
+        <h2>Important event detected!</h2>
+        <p>Le système a sélectionné automatiquement la date la plus festive du mois.</p>
+      </div>
+      <div class="calendar">
+        <div class="calendar-head"><span>SEPTEMBER</span><strong>2026</strong></div>
+        <div class="calendar-weekdays"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+        <div class="calendar-days" id="calendarDays"></div>
+        <div class="calendar-note">🎀 19 SEPTEMBER — SITRAKA'S BIRTHDAY</div>
+      </div>
+    </section>
+
+    <section class="cake-section container">
+      <div class="section-heading">
+        <span class="eyebrow">CELEBRATION MODULE</span>
+        <h2>Happy 26th Birthday 🎂</h2>
+        <p><strong>RAKOTOMALALA SITRAKA MAMY TANTELY</strong></p>
+      </div>
+      <div class="cake-stage">
+        <div class="cake-glow"></div>
+        <div class="cake">
+          <div class="candles" id="candles" aria-label="26 bougies symbolisées par le nombre 26">
+            <span class="candle-number">26</span>
+            <span class="flame flame-one"></span>
+            <span class="flame flame-two"></span>
+          </div>
+          <div class="cake-layer top-layer"></div>
+          <div class="cake-layer middle-layer"></div>
+          <div class="cake-layer bottom-layer"></div>
+          <div class="cake-plate"></div>
+        </div>
+        <button id="blowCandles" class="primary-button" type="button">Souffler les bougies 🎉</button>
+        <p id="cakeMessage" class="success-message" hidden>🎊 Bougies éteintes ! Le niveau de bonheur vient de dépasser les limites autorisées.</p>
+      </div>
+    </section>
+
+    <section class="humor-section container">
+      <div class="section-heading">
+        <span class="eyebrow">HR ALERTS</span>
+        <h2>Notifications du service bonne humeur 😂</h2>
+      </div>
+      <div class="humor-grid">
+        <article class="humor-card"><span>📄</span><h3>Leave Request</h3><p>Employee requests one day off.</p><strong>HR Admin response: Approved! 🎂</strong></article>
+        <article class="humor-card"><span>⏱️</span><h3>Birthday Overtime</h3><p>Reason: Celebrating 26 years of excellence.</p><strong>Status: Approved with unlimited cake. 😂</strong></article>
+        <article class="humor-card"><span>🧾</span><h3>Employee Benefits</h3><p>Health: Wishing you good health.<br>Peace: Unlimited.<br>Blessings: Renewed annually.</p><strong>Birthday cake: Mandatory.</strong></article>
+        <article class="humor-card"><span>🚨</span><h3>HR System Alert</h3><p>Warning: Too much happiness detected.</p><strong>Recommendation: Continue celebrating.</strong></article>
+      </div>
+    </section>
+
+    <section class="message-section container glass-card">
+      <span class="eyebrow">PERSONAL MESSAGE</span>
+      <h2>Chère Sitraka, 💗</h2>
+      <p>En ce jour spécial, je te souhaite une excellente santé, beaucoup de paix et de nombreuses bénédictions.</p>
+      <p>Que cette nouvelle année de ta vie soit remplie de belles opportunités, de joie, de sérénité et de moments précieux.</p>
+      <p>Que Dieu te protège, te guide et t'accompagne dans chacun de tes projets.</p>
+      <p class="signature">Joyeux 26e anniversaire ! 💗🎂</p>
+    </section>
+
+    <section class="final-section container">
+      <div class="final-card">
+        <span class="eyebrow">FINAL REPORT</span>
+        <h2>🎊 Birthday Celebration Approved 🎊</h2>
+        <h3>HAPPY BIRTHDAY, SITRAKA!</h3>
+        <p class="final-date">26 YEARS • 19 SEPTEMBER</p>
+        <div class="report-list">
+          <span>🎀 HR Admin Birthday Report</span>
+          <span>Status: Successfully celebrated ✅</span>
+          <span>Happiness: 100%</span>
+          <span>Cake: Required</span>
+          <span>Blessings: Unlimited</span>
+        </div>
+        <button id="finalCelebration" class="primary-button" type="button">Lancer la célébration finale ✨</button>
+      </div>
+    </section>
+
+    <footer class="container footer">
+      Créé avec beaucoup de bonne humeur par un collègue 💗
+    </footer>
+  </main>
+
+  <dialog id="giftModal" class="gift-modal">
+    <div class="modal-content">
+      <button id="closeGiftModal" class="close-button" type="button" aria-label="Fermer">×</button>
+      <div id="giftModalIcon" class="modal-icon">🎁</div>
+      <span id="giftModalLabel" class="eyebrow">BENEFIT UNLOCKED</span>
+      <h2 id="giftModalTitle">Cadeau</h2>
+      <p id="giftModalMessage"></p>
+      <button id="modalOkay" class="primary-button" type="button">Merci, système RH 💗</button>
+    </div>
+  </dialog>
+
+  <audio id="birthdayAudio" preload="none" loop>
+    <source src="audio/birthday-music.mp3" type="audio/mpeg">
+  </audio>
+  <script src="js/script.js"></script>
+</body>
+</html>
